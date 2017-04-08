@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Spawner : MonoBehaviour 
 {
@@ -39,6 +40,8 @@ public class Spawner : MonoBehaviour
 		{
 			System.Random random = new System.Random();
 			Spawn(random.Next(0, 3));
+
+			// Delay
 		}
 	}
 
