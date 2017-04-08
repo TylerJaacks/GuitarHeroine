@@ -10,6 +10,8 @@ public class TriggerDetection : MonoBehaviour
 		if (Input.GetButton(buttonName) && note != null)
 		{
 			// Do Stuff
+			// Update Score
+			// And Add Animation-thingy.
 
 			Destroy(note.gameObject);
 			note = null;
