@@ -2,6 +2,8 @@
 
 public class Note : MonoBehaviour 
 {
+	Vector3 newPosition =
+
 	void Start () 
 	{
 
