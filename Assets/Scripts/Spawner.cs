@@ -31,18 +31,18 @@ public class Spawner : MonoBehaviour
 	{
 		// Crashes Unity on Play
 
-		if (musicManager.songIsOver)
-		{
-			shouldSpawn = false;
-		}
+		// if (musicManager.songIsOver)
+		// {
+		// 	shouldSpawn = false;
+		// }
 
-		while (shouldSpawn) 
-		{
-			System.Random random = new System.Random();
-			Spawn(random.Next(0, 3));
+		// while (shouldSpawn) 
+		// {
+		// 	System.Random random = new System.Random();
+		// 	Spawn(random.Next(0, 3));
 
-			// Delay
-		}
+		// 	// Delay
+		// }
 	}
 
 	void Spawn(int note) 

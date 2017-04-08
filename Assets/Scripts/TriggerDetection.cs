@@ -24,7 +24,9 @@ public class TriggerDetection : MonoBehaviour
 
 			Destroy(note.gameObject);
 			note = null;
-		} else if (note != null) {
+		} 
+		else if (note != null) 
+		{
 			Math.Max(scoreManager.currentScore -= scoreManager.WRONG_NOTE_PENALTY, scoreManager.currentScore);
 			scoreManager.totalWrongNotes += 1;
 		}
