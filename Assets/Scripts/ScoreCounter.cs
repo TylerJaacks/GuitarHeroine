@@ -8,6 +8,6 @@ public class FinalScoreCounter : MonoBehaviour
 	
 	void Update () 
 	{
-		finalScore.text = "Final Score: " + scoreManager.GetFinalScore().ToString();
+		finalScore.text = "Score: " + scoreManager.GetCurrentScore().ToString();
 	}
 }

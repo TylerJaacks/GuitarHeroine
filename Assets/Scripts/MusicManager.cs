@@ -3,14 +3,19 @@
 public class MusicManager : MonoBehaviour 
 {
 	public AudioSource music;
+	public AudioClip clip;
 	public float currentTime;
 	public float songTotalTime;
 	public bool songIsOver = false;
 
 	void Start() 
 	{
+		currentTime = 0.0f;
+		clip = music.GetComponent<AudioClip>();
 		music.Play();
-		songTotalTime = music.time;
+		songTotalTime = clip.length;
+
+		Debug.Log(songTotalTime);
 	}
 
 	void Update()
