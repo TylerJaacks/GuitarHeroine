@@ -24,6 +24,6 @@ public class Spawner : MonoBehaviour
 
 	void Update () 
 	{
-		// Check if the note makes contact with the note buttons.
+		
 	}
 }
