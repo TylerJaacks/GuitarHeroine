@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class FinalScoreCounter : MonoBehaviour 
+public class ScoreCounter : MonoBehaviour 
 {
-	public Text finalScore;
+	public Text score;
 	public ScoreManager scoreManager;
 	
 	void Update () 
 	{
-		finalScore.text = "Score: " + scoreManager.GetCurrentScore().ToString();
+		score.text = "Score: " + scoreManager.GetCurrentScore().ToString();
 	}
 }

@@ -11,23 +11,20 @@ public class MusicManager : MonoBehaviour
 	void Start() 
 	{
 		currentTime = 0.0f;
-		clip = music.GetComponent<AudioClip>();
-		music.Play();
 		songTotalTime = clip.length;
-
-		Debug.Log(songTotalTime);
+		music.Play();
 	}
 
 	void Update()
 	{
-		// if (currentTime == songTotalTime)
-		// {
-		// 	songIsOver = true;
-		// }
+		if (currentTime.Equals(songTotalTime))
+		{
+			songIsOver = true;
+		}
 
-		// else 
-		// {
-		// 	currentTime += 1;
-		// }
+		else 
+		{
+			currentTime++;
+		}
 	}
 }

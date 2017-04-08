@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 	{
 		if (musicManager.songIsOver)
 		{
-			SceneManager.LoadScene("GameOver");
-			scoreManager.SetFinalScore();
+			//SceneManager.LoadScene("GameOver");
+			//scoreManager.SetFinalScore();
 		}
 	}
 }

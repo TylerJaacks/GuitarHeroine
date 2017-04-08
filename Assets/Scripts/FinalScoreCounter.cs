@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreCounter : MonoBehaviour 
+public class FinalScoreCounter : MonoBehaviour 
 {
-	public Text text;
-	
+	public Text finalScoreText;
+
 	void Update () 
 	{
-		text.text = "Final Score: " + PlayerPrefs.GetInt("FINAL_SCORE");
+		finalScoreText.text = "Final Score: " + PlayerPrefs.GetInt("FINAL_SCORE");
 	}
 }

@@ -27,7 +27,6 @@ public class Spawner : MonoBehaviour
 
 		if (musicManager.songIsOver)
 		{
-			Debug.Log("Song is over!");
 			shouldSpawn = false;
 		}
 
