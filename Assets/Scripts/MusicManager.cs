@@ -15,14 +15,14 @@ public class MusicManager : MonoBehaviour
 
 	void Update()
 	{
-		if (currentTime == songTotalTime)
-		{
-			songIsOver = true;
-		}
+		// if (currentTime == songTotalTime)
+		// {
+		// 	songIsOver = true;
+		// }
 
-		else 
-		{
-			currentTime += 1;
-		}
+		// else 
+		// {
+		// 	currentTime += 1;
+		// }
 	}
 }

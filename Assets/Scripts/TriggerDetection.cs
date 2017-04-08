@@ -8,27 +8,24 @@ public class TriggerDetection : MonoBehaviour
 
 	public ScoreManager scoreManager;
 
-	void Start()
-	{
-		scoreManager = new ScoreManager();
-	}
-
 	void Update()
 	{
 		if (Input.GetButton(buttonName) && note != null)
 		{
-			// And Add Animation-thingy.
-
-			Debug.Log("Hit!");
+			// Not Working
 			scoreManager.currentScore += scoreManager.CORRECT_NOTE_BONUS;
+
+			scoreManager.totalCorrectNotes++;
 
 			Destroy(note.gameObject);
 			note = null;
-		} 
-		else if (note != null) 
+		}
+
+		// Detect if the note was missed is so fucked up
+		else if (!Input.GetButton(buttonName) && note != null) 
 		{
-			Math.Max(scoreManager.currentScore -= scoreManager.WRONG_NOTE_PENALTY, scoreManager.currentScore);
-			scoreManager.totalWrongNotes += 1;
+			//Math.Max(scoreManager.currentScore -= scoreManager.WRONG_NOTE_PENALTY, scoreManager.currentScore);
+			scoreManager.totalWrongNotes++;
 		}
 	}
 

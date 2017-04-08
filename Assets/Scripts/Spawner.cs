@@ -11,7 +11,6 @@ public class Spawner : MonoBehaviour
 	public GameObject fretBoard;
 	public float delay = 1.5f;
 	public bool shouldSpawn = true;
-
 	public int blue = 0;
 	public int green = 1; 
 	public int red = 2;
@@ -22,19 +21,19 @@ public class Spawner : MonoBehaviour
 	Vector3 redNoteSpawnPos = new Vector3(0.69f, 4.65f, 7.58f);
 	Vector3 yellowNoteSpawnPos = new Vector3(2.0f, 4.65f, 7.58f);
 
-	void Start () 
-	{
-		musicManager = new MusicManager();
-	}
-
 	void Update () 
 	{
-		// Crashes Unity on Play
+		if (musicManager.songIsOver)
+		{
+			Debug.Log("Song is over!");
+			shouldSpawn = false;
+		}
 
-		// if (musicManager.songIsOver)
-		// {
-		// 	shouldSpawn = false;
-		// }
+		for (int i = 0; i < 1; i++)
+		{
+			System.Random random = new System.Random();
+			Spawn(random.Next(0, 500));
+		}
 
 		// while (shouldSpawn) 
 		// {
