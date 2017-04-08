@@ -7,3 +7,4 @@ public class Note : MonoBehaviour
 		transform.position += transform.forward * Time.deltaTime * -5.0f;
 	}
 }
+//HI!
