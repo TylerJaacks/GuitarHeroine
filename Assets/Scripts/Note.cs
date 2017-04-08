@@ -2,10 +2,11 @@
 
 public class Note : MonoBehaviour 
 {	
-	Note note;
+	public Note note;
+	public float speed = -5.0f;
 
 	void Update () 
 	{
-		transform.position += transform.forward * Time.deltaTime * -5.0f;
+		transform.position += transform.forward * Time.deltaTime * speed;
 	}
 }
