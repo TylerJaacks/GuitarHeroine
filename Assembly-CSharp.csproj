@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Note.cs" />
-     <Compile Include="Assets\Scripts\NoteSpawner.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/tylerjaacks/Documents/Projects/Unity Projects/GuitarHeroine/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
