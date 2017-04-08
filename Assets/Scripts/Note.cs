@@ -10,10 +10,11 @@ public class Note : MonoBehaviour
 	}
 	void OnTriggerEnter(Collider collider)
 	{
+		Debug.Log(collider.GetComponent<Note>());
+
 		if (collider.GetComponent<Note>())
 		{
 			note = collider.GetComponent<Note>();
-			Destroy(note);
 		}
 	}
 }
