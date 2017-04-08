@@ -28,6 +28,8 @@ public class Spawner : MonoBehaviour
 
 	void Update () 
 	{
+		// Crashes Unity on Play
+
 		if (musicManager.songIsOver)
 		{
 			shouldSpawn = false;
