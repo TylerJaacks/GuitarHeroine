@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TriggerDetection : MonoBehaviour 
 {
 	public Note note;
 	public string buttonName;
+
+	public ScoreManager scoreManager;
+
+	void Start()
+	{
+		scoreManager = new ScoreManager();
+	}
 
 	void Update()
 	{
@@ -14,9 +22,13 @@ public class TriggerDetection : MonoBehaviour
 			// And Add Animation-thingy.
 
 			Debug.Log("Hit!");
+			scoreManager.currentScore += scoreManager.CORRECT_NOTE_BONUS;
 
 			Destroy(note.gameObject);
 			note = null;
+		} else if (note != null) {
+			Math.Max(scoreManager.currentScore -= scoreManager.WRONG_NOTE_PENALTY, scoreManager.currentScore);
+			scoreManager.totalWrongNotes += 1;
 		}
 	}
 
@@ -32,7 +44,7 @@ public class TriggerDetection : MonoBehaviour
 	{
 		if (collider.GetComponent<Note>() == note)
 		{
-			Debug.Log("Exited!");
+			scoreManager.totalNotesPassed += 1;
 
 			Destroy(note.gameObject);
 			note = null;
