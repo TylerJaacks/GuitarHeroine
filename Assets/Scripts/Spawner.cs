@@ -23,6 +23,8 @@ public class Spawner : MonoBehaviour
 
 	void Update () 
 	{
+		// Better Way to do this?
+
 		if (musicManager.songIsOver)
 		{
 			Debug.Log("Song is over!");
