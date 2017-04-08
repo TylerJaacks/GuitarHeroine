@@ -2,13 +2,10 @@
 
 public class Music : MonoBehaviour 
 {
-	void Start () 
+	public AudioSource music;
+
+	void Start() 
 	{
-		
-	}
-	
-	void Update () 
-	{
-		
+		music.Play();
 	}
 }
