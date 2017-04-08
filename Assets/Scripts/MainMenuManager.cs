@@ -21,7 +21,7 @@ public class MainMenuManager : MonoBehaviour
 
     void StartGameOnClick()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("SongSelector");
     }
 
     void OptionsOnClick()

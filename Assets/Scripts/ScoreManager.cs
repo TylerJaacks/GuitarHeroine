@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
 	public int totalCorrectNotes = 0;
 	public int totalWrongNotes = 0;
 
-	public int CalculateFinalScore()
+	public int GetFinalScore()
 	{
 		finalScore = currentScore;
 
