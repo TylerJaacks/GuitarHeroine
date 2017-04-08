@@ -9,7 +9,6 @@ public class Spawner : MonoBehaviour
 	public Note redNote;
 	public Note yellowNote;
 	public GameObject fretBoard;
-	public float delay = 1.5f;
 	public bool shouldSpawn = true;
 	public int blue = 0;
 	public int green = 1; 
@@ -23,26 +22,11 @@ public class Spawner : MonoBehaviour
 
 	void Update () 
 	{
-		// Better Way to do this?
-
-		if (musicManager.songIsOver)
-		{
-			shouldSpawn = false;
-		}
-
 		for (int i = 0; i < 1; i++)
 		{
 			System.Random random = new System.Random();
-			Spawn(random.Next(0, 500));
+			Spawn(random.Next(0, 350));
 		}
-
-		// while (shouldSpawn) 
-		// {
-		// 	System.Random random = new System.Random();
-		// 	Spawn(random.Next(0, 3));
-
-		// 	// Delay
-		// }
 	}
 
 	void Spawn(int note) 

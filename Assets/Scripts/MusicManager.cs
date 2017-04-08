@@ -37,7 +37,7 @@ public class MusicManager : MonoBehaviour
 
 	void Update()
 	{
-		if (songTotalTime == currentTime)
+		if (currentTime > songTotalTime)
 		{
 			songIsOver = true;
 		}

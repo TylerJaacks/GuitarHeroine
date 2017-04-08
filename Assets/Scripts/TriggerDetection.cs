@@ -24,8 +24,7 @@ public class TriggerDetection : MonoBehaviour
 		// Detect if the note was missed is so fucked up
 		else if (!Input.GetButton(buttonName) && note != null) 
 		{
-			//Math.Max(scoreManager.currentScore -= scoreManager.WRONG_NOTE_PENALTY, scoreManager.currentScore);
-			scoreManager.totalWrongNotes++;
+			
 		}
 	}
 
@@ -42,6 +41,14 @@ public class TriggerDetection : MonoBehaviour
 		if (collider.GetComponent<Note>() == note)
 		{
 			scoreManager.totalNotesPassed += 1;
+
+			scoreManager.totalWrongNotes++;
+			scoreManager.currentScore -= scoreManager.WRONG_NOTE_PENALTY;
+			
+			if (scoreManager.currentScore < 0) 
+			{
+				scoreManager.currentScore = 0;
+			}
 
 			Destroy(note.gameObject);
 			note = null;

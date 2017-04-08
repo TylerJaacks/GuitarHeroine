@@ -11,6 +11,11 @@ public class ScoreManager : MonoBehaviour
 	public int totalCorrectNotes = 0;
 	public int totalWrongNotes = 0;
 
+	void Update()
+	{
+		SetCurrentScore();	
+	}
+
 	public void SetFinalScore()
 	{
 		finalScore = currentScore;
@@ -23,8 +28,9 @@ public class ScoreManager : MonoBehaviour
 		PlayerPrefs.SetInt("FINAL_SCORE" , finalScore);
 	}
 
-	public int GetCurrentScore()
+	public void SetCurrentScore()
 	{
-		return currentScore;
+		PlayerPrefs.SetInt("CURRENT_SCORE" , currentScore);
+		Debug.Log(PlayerPrefs.GetInt("CURRENT_SCORE"));
 	}
 }

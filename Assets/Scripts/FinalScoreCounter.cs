@@ -7,6 +7,6 @@ public class FinalScoreCounter : MonoBehaviour
 
 	void Update () 
 	{
-		finalScoreText.text = "Final Score: " + PlayerPrefs.GetInt("FINAL_SCORE");
+		finalScoreText.text = "Final Score: " + PlayerPrefs.GetInt("CURRENT_SCORE");
 	}
 }
