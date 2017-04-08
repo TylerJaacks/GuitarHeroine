@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class StartMenuButtonEvents : MonoBehaviour 
+public class MainMenuManager : MonoBehaviour 
 {
 	public Button startGame;
     public Button options;
@@ -20,12 +21,12 @@ public class StartMenuButtonEvents : MonoBehaviour
 
     void StartGameOnClick()
     {
-        Application.LoadLevel("Game");
+        SceneManager.LoadScene("Game");
     }
 
     void OptionsOnClick()
     {
-        Application.LoadLevel("Options");
+        SceneManager.LoadScene("Options");
     }
 
     void ExitGameOnClick()
