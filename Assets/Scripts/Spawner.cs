@@ -10,9 +10,17 @@ public class Spawner : MonoBehaviour
 	void Start () 
 	{
 		GameObject.Instantiate(redNote);
+		GameObject.Instantiate(blueNote);
+		GameObject.Instantiate(yellowNote);	
+		GameObject.Instantiate(greenNote);
 	}
 
 	void Update () 
+	{
+		
+	}
+
+	void Spawn(Note note, Vector2 position)
 	{
 		
 	}
