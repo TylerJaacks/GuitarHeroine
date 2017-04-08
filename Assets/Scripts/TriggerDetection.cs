@@ -12,6 +12,7 @@ public class TriggerDetection : MonoBehaviour
 			// Do Stuff
 			// Update Score
 			// And Add Animation-thingy.
+			Material mat2;
 
 			Destroy(note.gameObject);
 			note = null;
