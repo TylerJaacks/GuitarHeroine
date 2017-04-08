@@ -12,7 +12,8 @@ public class TriggerDetection : MonoBehaviour
 			// Do Stuff
 			// Update Score
 			// And Add Animation-thingy.
-			Material mat3;
+
+			Debug.Log("Hit!");
 
 			Destroy(note.gameObject);
 			note = null;
@@ -31,6 +32,8 @@ public class TriggerDetection : MonoBehaviour
 	{
 		if (collider.GetComponent<Note>() == note)
 		{
+			Debug.Log("Exited!");
+
 			Destroy(note.gameObject);
 			note = null;
 		}
