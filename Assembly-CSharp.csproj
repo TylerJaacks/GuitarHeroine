@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Music.cs" />
      <Compile Include="Assets\Scripts\Note.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\TriggerDetection.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/tylerjaacks/Documents/Projects/Unity Projects/GuitarHeroine/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
