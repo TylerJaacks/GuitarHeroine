@@ -16,6 +16,7 @@ public class SongSelecter : MonoBehaviour
     {
         Button btn1 = backButton.GetComponent<Button>();
         Button btn2 = playButton.GetComponent<Button>();
+		Dropdown dropDown = songs.GetComponent<Dropdown>();
 		
         btn1.onClick.AddListener(BackOnClick);
         btn2.onClick.AddListener(PlayOnClick);
