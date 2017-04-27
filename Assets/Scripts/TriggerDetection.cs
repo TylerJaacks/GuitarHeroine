@@ -8,6 +8,11 @@ public class TriggerDetection : MonoBehaviour
 
 	public ScoreManager scoreManager;
 
+	void Start() 
+	{
+		
+	}
+
 	void Update()
 	{
 		if (Input.GetButton(buttonName) && note != null)
