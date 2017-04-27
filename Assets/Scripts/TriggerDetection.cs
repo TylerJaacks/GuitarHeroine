@@ -10,9 +10,8 @@ public class TriggerDetection : MonoBehaviour
 
 	void Start() 
 	{
-		hitEffect.GetComponent<ParticleSystem>().enableEmission = false;
+		hitEffect = hitEffect.GetComponent<ParticleSystem>();
 		hitEffect.Stop();
-		Debug.Log(hitEffect.isEmitting);
 	}
 
 	void Update()
