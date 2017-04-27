@@ -5,31 +5,28 @@ public class TriggerDetection : MonoBehaviour
 {
 	public Note note;
 	public string buttonName;
-
 	public ScoreManager scoreManager;
+	public ParticleSystem hitEffect;
 
 	void Start() 
 	{
-		
+		hitEffect.GetComponent<ParticleSystem>().enableEmission = false;
+		hitEffect.Stop();
+		Debug.Log(hitEffect.isEmitting);
 	}
 
 	void Update()
 	{
 		if (Input.GetButton(buttonName) && note != null)
 		{
-			// Not Working
 			scoreManager.currentScore += scoreManager.CORRECT_NOTE_BONUS;
 
 			scoreManager.totalCorrectNotes++;
 
+			hitEffect.Play();
+
 			Destroy(note.gameObject);
 			note = null;
-		}
-
-		// Detect if the note was missed is so fucked up
-		else if (!Input.GetButton(buttonName) && note != null) 
-		{
-			
 		}
 	}
 
