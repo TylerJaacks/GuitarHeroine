@@ -8,7 +8,6 @@ public class ScoreCounter : MonoBehaviour
 	
 	void Update () 
 	{
-		Debug.Log(PlayerPrefs.GetInt("CURRENT_SCORE"));
 		score.text = "Score: " + PlayerPrefs.GetInt("CURRENT_SCORE");
 	}
 }

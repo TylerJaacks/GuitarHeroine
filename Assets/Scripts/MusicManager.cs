@@ -11,23 +11,17 @@ public class MusicManager : MonoBehaviour
 
 	void Start() 
 	{
-		Debug.Log(PlayerPrefs.GetString("SONG").ToString());
-
 		if (PlayerPrefs.GetString("SONG").Equals("All Star - Smash Mouth")) 
 		{
-			Debug.Log("Song 0");
 			clip = songs[0];
 		}
 
 		if (PlayerPrefs.GetString("SONG").Equals("We Are Number One - Lazy Town")) 
 		{
-			Debug.Log("Song 1");
 			clip = songs[1];
 		}
 
 		music.clip = clip;
-
-		Debug.Log(music.clip.ToString());
 
 		clip = music.clip;
 		currentTime = 0.0f;

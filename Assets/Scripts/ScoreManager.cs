@@ -31,6 +31,5 @@ public class ScoreManager : MonoBehaviour
 	public void SetCurrentScore()
 	{
 		PlayerPrefs.SetInt("CURRENT_SCORE" , currentScore);
-		Debug.Log(PlayerPrefs.GetInt("CURRENT_SCORE"));
 	}
 }
