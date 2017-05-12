@@ -2,21 +2,24 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class OptionsMenu : MonoBehaviour 
+namespace Assets.Scripts
 {
-	public Slider volume;
-	public Toggle fullScreen;
-	public Toggle vsync;
-	public Button backButton;
-
-	void Start () 
-	{
-		Button btn1 = backButton.GetComponent<Button>();
-		btn1.onClick.AddListener(BackButtonOnClick);
-	}
-
-	void BackButtonOnClick()
+    public class OptionsMenu : MonoBehaviour
     {
-        SceneManager.LoadScene("MainMenu");
+        public Slider volume;
+        public Toggle fullScreen;
+        public Toggle vsync;
+        public Button backButton;
+
+        void Start()
+        {
+            Button btn1 = backButton.GetComponent<Button>();
+            btn1.onClick.AddListener(BackButtonOnClick);
+        }
+
+        void BackButtonOnClick()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

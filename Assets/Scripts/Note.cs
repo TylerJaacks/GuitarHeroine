@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-public class Note : MonoBehaviour 
-{	
-	public Note note;
-	public float speed = -5.0f;
+namespace Assets.Scripts
+{
+    public class Note : MonoBehaviour
+    {
+        public Note note;
+        public float speed = -5.0f;
 
-	void Update () 
-	{
-		transform.position += transform.forward * Time.deltaTime * speed;
-	}
+        void Update()
+        {
+            transform.position += transform.forward * Time.deltaTime * speed;
+        }
+    }
 }

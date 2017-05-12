@@ -1,34 +1,35 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SongSelecter : MonoBehaviour
- {
-	public Dropdown songs;
-	public Button backButton;
-	public Button playButton;
-	public List<string> songList = new List<string>();
-
-	void Start()
+namespace Assets.Scripts
+{
+    public class SongSelecter : MonoBehaviour
     {
-        Button btn1 = backButton.GetComponent<Button>();
-        Button btn2 = playButton.GetComponent<Button>();
-		Dropdown dropDown = songs.GetComponent<Dropdown>();
-		
-        btn1.onClick.AddListener(BackOnClick);
-        btn2.onClick.AddListener(PlayOnClick);
-    }
+        public Dropdown songs;
+        public Button backButton;
+        public Button playButton;
 
-    void BackOnClick()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+        void Start()
+        {
+            PlayerPrefs.SetString("SONG", "All Star - Smash Mouth");
 
-	void PlayOnClick()
-    {
-        SceneManager.LoadScene("Game");
+            Button btn1 = backButton.GetComponent<Button>();
+            Button btn2 = playButton.GetComponent<Button>();
+            Dropdown dropDown = songs.GetComponent<Dropdown>();
+
+            btn1.onClick.AddListener(BackOnClick);
+            btn2.onClick.AddListener(PlayOnClick);
+        }
+
+        void BackOnClick()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        void PlayOnClick()
+        {
+            SceneManager.LoadScene("Game");
+        }
     }
 }

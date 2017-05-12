@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour 
+namespace Assets.Scripts
 {
-	public ScoreManager scoreManager;
-	public MusicManager musicManager;
+    public class GameManager : MonoBehaviour
+    {
+        public ScoreManager scoreManager;
+        public MusicManager musicManager;
 
-	void Update () 
-	{
-		scoreManager.SetCurrentScore();
+        void Update()
+        {
+            scoreManager.SetCurrentScore();
 
-		if (musicManager.songIsOver)
-		{
-			SceneManager.LoadScene("GameOver");
-		}
-	}
+            if (musicManager.songIsOver)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
+    }
 }

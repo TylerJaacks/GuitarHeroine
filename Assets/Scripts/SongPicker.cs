@@ -1,19 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SongPicker : MonoBehaviour 
+namespace Assets.Scripts
 {
-	public void ValueChange(int _i) 
-	{
-		if (_i == 0)
-		{
-			PlayerPrefs.SetString("SONG", "All Star - Smash Mouth");
-		}
+    public class SongPicker : MonoBehaviour
+    {
+        public void ValueChange(int _i)
+        {
+            if (_i == 0)
+            {
+                PlayerPrefs.SetString("SONG", "All Star - Smash Mouth");
+            }
 
-		if (_i == 1)
-		{
-			PlayerPrefs.SetString("SONG", "We Are Number One - Lazy Town");
-		}
-	}
+            if (_i == 1)
+            {
+                PlayerPrefs.SetString("SONG", "We Are Number One - Lazy Town");
+            }
+        }
+    }
 }
