@@ -15,6 +15,8 @@ namespace Assets.Scripts
             hitEffect.Stop();
         }
 
+        // TODO Add Struming
+        // TODO Add Spam Penalties
         void Update()
         {
             if (Input.GetButton(buttonName) && note != null)
